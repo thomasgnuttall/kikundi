@@ -1,0 +1,33 @@
+(spaceship) Thomass-MBP:kikundi tom$ python kikundi run-pipeline conf/setup.yaml --report
+[2019-02-17 19:59:45,606] INFO [kikundi.utils.package_banner:37]
+[2019-02-17 19:59:45,606] INFO [kikundi.utils.package_banner:37]
+[2019-02-17 19:59:45,606] INFO [kikundi.utils.package_banner:37]
+[2019-02-17 19:59:45,606] INFO [kikundi.utils.package_banner:37]          _  ___ _                    _ _
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.package_banner:37]         | |/ (_) | ___   _ _ __   __| (_)
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.package_banner:37]         | ' /| | |/ / | | | '_ \ / _` | |
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.package_banner:37]         | . \| |   <| |_| | | | | (_| | |
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.package_banner:37]         |_|\_\_|_|\_\__,_|_| |_|\__,_|_|
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.package_banner:37]
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.package_banner:37]
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.package_banner:37]
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.package_banner:37]
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.package_banner:37]
+[2019-02-17 19:59:45,607] INFO [__main__.run_pipeline:48] Commencing run with id 086cc2c2-47f5-4a06-8b71-b0f02a053fc9
+[2019-02-17 19:59:45,607] INFO [kikundi.utils.load_configuration:88] Loading config file conf/setup.yaml
+[2019-02-17 19:59:45,608] INFO [__main__.run_pipeline:59] Loading dataframe tagtraum from data/acousticbrainz-mediaeval2017-tagtraum-train.tsv
+[2019-02-17 19:59:46,575] INFO [kikundi.utils.load_dataframe:52] 486740 rows and 11 columns
+[2019-02-17 19:59:46,615] INFO [__main__.run_pipeline:59] Loading dataframe allmusic from data/acousticbrainz-mediaeval2017-allmusic-train.tsv
+[2019-02-17 19:59:53,551] INFO [kikundi.utils.load_dataframe:52] 1353213 rows and 42 columns
+[2019-02-17 19:59:53,887] INFO [__main__.run_pipeline:59] Loading dataframe discogs from data/acousticbrainz-mediaeval2017-discogs-train.tsv
+[2019-02-17 19:59:57,573] INFO [kikundi.utils.load_dataframe:52] 904944 rows and 32 columns
+[2019-02-17 19:59:57,869] INFO [__main__.run_pipeline:59] Loading dataframe lastfm from data/acousticbrainz-mediaeval2017-lastfm-train.tsv
+[2019-02-17 19:59:58,993] INFO [kikundi.utils.load_dataframe:52] 566710 rows and 12 columns
+[2019-02-17 19:59:59,092] INFO [kikundi.utils.join_dataframes:60] Joining 4 dataframes on recordingmbid
+[2019-02-17 20:00:03,103] INFO [kikundi.utils.join_dataframes:64] Final frame length: 247716
+[2019-02-17 20:00:39,030] INFO [kikundi.feature_extraction.filter_subgenres:78] Removing subgenres that do not co-occur more than 1750 times:
+[2019-02-17 20:00:39,131] INFO [kikundi.feature_extraction.filter_subgenres:85] 436 subgenres removed
+[2019-02-17 20:00:39,454] INFO [kikundi.feature_extraction.compute_distances:91] Computing cosine distance between subgenres
+[2019-02-17 20:00:45,532] INFO [kikundi.model.hierarchical_clustering:26] Writing dendrogram to results/plots/086cc2c2-47f5-4a06-8b71-b0f02a053fc9_dendrogram.png
+[2019-02-17 20:00:52,255] INFO [kikundi.evaluation.evaluate:23] Evaluating the clustering of 628 subgenres into clusters of size 2-100
+[2019-02-17 20:00:57,658] INFO [kikundi.reporting.report:16] Computing Davies Bouldin Index for k=2:100
+[2019-02-17 20:01:03,043] INFO [kikundi.reporting.plot_db:36] Writing plot to results/plots/086cc2c2-47f5-4a06-8b71-b0f02a053fc9_DaviesBouldin.png

@@ -1,0 +1,11 @@
+dataframes:
+  allmusic: data/acousticbrainz-mediaeval2017-allmusic-train.tsv
+  discogs:  data/acousticbrainz-mediaeval2017-discogs-train.tsv
+  lastfm:   data/acousticbrainz-mediaeval2017-lastfm-train.tsv
+  tagtraum: data/acousticbrainz-mediaeval2017-tagtraum-train.tsv
+
+# to join on
+index: recordingmbid
+
+# Threshold for co-occurence
+threshold: 8000
